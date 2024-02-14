@@ -37,15 +37,49 @@ Output:
 */
 
 // ========================= CODE =========================
-//code disini gunakan console.log untuk outputnya
+// code disini gunakan console.log untuk outputnya
 
-let nama = "",
-  peran = "";
+// Memberikan variable untuk wadah data nama dan peran
 
+let nama = "Imo",
+  peran = "Penyihir";
+
+// Mengecek variable nama
 if (nama == "") {
-  console.log("Nama wajib diisi!");
+  console.log("nama wajib diisi");
 } else {
+  // Mengecek variable Peran
   if (peran == "") {
-    console.log("Pilih Peranmu untuk memulai game!");
+    console.log("Pilih Peranmu untuk memulai game");
+  } else {
+    // Memberikan output sesuai Peran yang dipilih
+    if (peran == "Ksatria") {
+      console.log(
+        "Halo Ksatria " + `${nama}` + ", kamu dapat menyerang dengan senjatamu!"
+      );
+    } else if (peran == "Tabib") {
+      console.log(
+        "Halo Tabib " + `${nama}` + ", kamu akan membantu temanmu yang terluka"
+      );
+    } else if (peran == "Penyihir") {
+      console.log(
+        "Halo Penyihir " + `${nama}` + ", ciptakan keajaiban yang membantu kemenanganmu!"
+      );
+      // Jika Peran yang dipilih tidak ada di dalam opsi
+    } else {
+      console.log(
+        "Tapi kayaknya kamu jadi bot aja ya, peran yang kamu pilih ga ada"
+      );
+    }
   }
 }
+
+// ========================= CODE =========================
+
+/*
+========================= TEST CASES =========================
+1. nama = "", peran = "" -> BERHASIL (output: nama wajib diisi)
+2. nama = "Imo", peran = "Ksatria" -> BERHASIL (output: Halo Ksatria Imo, kamu dapat menyerang dengan senjatamu!)
+3. nama = "Imo", peran = "Manusia" -> BERHASIL (output: Tapi kayaknya kamu jadi bot aja ya, peran yang kamu pilih ga ada)
+========================= TEST CASES =========================
+*/
