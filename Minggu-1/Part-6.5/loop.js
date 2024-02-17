@@ -61,34 +61,52 @@ for (i = 5; i > 0; i--) {
 */
 
 // ========================= KODE 3 =========================
-let angka = 9;
-
-console.log(`\n` + "Soal Ketiga");
-if (angka % 2 == 0) {
-  for (counter = 2; counter <= 100; counter += 2) {
-    console.log(counter); //bilangan genap 1-100
-  }
-  // Mengecek apakah counter genap
-  if (counter % 2 == 0) {
-    console.log("Genap");
-  }
-} else if (angka % 2 != 0) {
-  for (counter = 1; counter <= 100; counter += 2) {
-    console.log(counter); //bilangan ganjil 1-100
-  }
-  // Mengecek apakah counter ganjil
-  if (counter % 2 != 0) {
-    console.log("Ganjil");
+console.log(`\n` + "Soal 3");
+// Catatan: i = 0 adalah deklarasi; i++ itu adalah counter
+for (i = 0; i <= 100; i++) {
+  if (i % 2 == 0) {
+    console.log(i + " Adalah bilangan genap");
+  } else {
+    console.log(i + " Adalah bilangan ganjil");
   }
 }
+// ========================= KODE 3 =========================
 
-//4. counter kelipatan
-// Buatlah 3 perulangan baru dari 1 - 100, dengan pertambahan counter sebesar 2, 5, dan 9.
-// Pada 3 perulangan baru ini periksa setiap angka counter:
+/* 
+========================= TUGAS 4 =========================
+4. counter kelipatan
+- Buatlah 3 perulangan baru dari 1 - 100, dengan pertambahan counter sebesar 2, 5, dan 9.
+- Pada 3 perulangan baru ini periksa setiap angka counter:
 
-// Apabila bukan kelipatan yang ditentukan tidak perlu menuliskan apa-apa
-// Apabila angka counter adalah kelipatan 3 dengan pertambahan 2, kelipatan 6 dengan pertambahan 5, dan kelipatan 10 dengan pertambahan 9, tuliskan:
-// "3 kelipatan 3"dan seterusnya.
+- Apabila bukan kelipatan yang ditentukan tidak perlu menuliskan apa-apa
+- Apabila angka counter adalah kelipatan 3 dengan pertambahan 2, kelipatan 6 dengan pertambahan 5, dan kelipatan 10 dengan pertambahan 9, tuliskan:
+- "3 kelipatan 3"dan seterusnya.
+========================= TUGAS 4 =========================
+*/
+
+// ========================= KODE 4 =========================
+console.log(`\n` + "Soal 4");
+console.log("Loop Pertama: ");
+
+// Loop
+for (i = 0; i <= 100; i += 2) {
+  if (i % 3 == 0) {
+    console.log(i + " Adalah bilangan kelipatan 3 dengan pertambahan 2");
+  }
+}
+console.log(`\n` + "Loop Kedua: ");
+for (i = 0; i <= 100; i += 5) {
+  if (i % 6 == 0) {
+    console.log(i + " Adalah bilangan kelipatan 6 dengan pertambahan 5");
+  }
+}
+console.log(`\n` + "Loop Ketiga: ");
+for (i = 0; i <= 100; i += 9) {
+  if (i % 10 == 0) {
+    console.log(i + " Adalah bilangan kelipatan 10 dengan pertambahan 9");
+  }
+}
+// ========================= KODE 4 =========================
 
 /*
 ========================= TUGAS 5 =========================
@@ -108,9 +126,12 @@ if (angka % 2 == 0) {
 let input = 5,
   bintang = "*";
 
-for (k = 0; k < 5; k++) {
-  for (l = 0; k < 5 - 1; k++) {
-    console.log("");
+// Bintang di kiri
+console.log(`\n` + "Soal 5");
+for (i = 0; i <= 5; i++) {
+  let hasil = "";
+  for (j = 0; j < i; j++) {
+    hasil += bintang;
   }
-  console.log(bintang);
+  console.log(hasil);
 }
